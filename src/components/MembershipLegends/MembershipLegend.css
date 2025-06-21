@@ -1,0 +1,17 @@
+
+.floating-membership-legend {
+  /* position: fixed; 
+  bottom: 20px;
+  left: 10px;
+  z-index: 9999; */
+  height:35px;
+  border: 1px solid #ddd;
+   border-radius: 3px;
+
+}
+
+.membership-legend {
+  display: inline-flex;
+  padding:5px;
+  align-items: center;
+}

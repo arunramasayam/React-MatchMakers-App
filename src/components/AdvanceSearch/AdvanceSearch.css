@@ -1,0 +1,195 @@
+.advance-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap:20px;
+  row-gap:15px;
+  padding: 15px;
+  margin: 0px auto;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  border:1px solid #ddd;
+  border-radius:3px;
+  margin-bottom:20px;
+}
+
+.form-group {
+  position: relative;
+  min-width: 200px;
+}
+
+.form-group select {
+  width: 225px;
+  padding: 16px 16px 8px 16px;
+  border: none;
+  font-size: 14px;
+  background-color: white;
+  transition: all 0.2s ease;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  color: #374151;
+  min-height:45px;
+  border-bottom: 1px solid black;
+}
+
+.form-group input {
+  width: 425px;
+  padding: 16px 16px 8px 16px;
+  border: none;
+  font-size: 14px;
+  background-color: #fff;
+  transition: all 0.2s ease;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  color: #374151;
+  min-height:20px;
+  border-bottom: 1px solid black;
+}
+
+/* Custom dropdown arrow */
+.form-group select{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23666' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.form-group select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+  border-bottom-color: #3b82f6;
+}
+
+.form-group select:hover {
+  border-color: #9ca3af;
+}
+
+/* Hide the actual label */
+.form-group label {
+  display: none;
+}
+
+/* Create floating label using pseudo-element */
+.form-group::before {
+  content: attr(data-label);
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  padding: 0;
+  color:black;
+  font-size: 12.5px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+/* When select is focused, move the label up */
+.form-group:focus-within::before {
+  top: 0px;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #3b82f6;
+  background-color: #f8f9fa;
+  padding: 0 4px;
+  font-weight: 500;
+}
+
+/* When select has a value (using data attribute), keep label up */
+.form-group[data-has-value="true"]::before {
+  top: 0px;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #3b82f6;
+  background-color: #f8f9fa;
+  padding: 0 4px;
+  font-weight: 500;
+}
+
+.form-group select:focus,
+.form-group[data-has-value="true"] select {
+  border-bottom-color: #3b82f6;
+}
+
+.form-group input:focus,
+.form-group[data-has-value="true"] input {
+  border-bottom-color: #3b82f6;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .advance-search-form {
+    gap: 12px;
+  }
+  
+  .form-group {
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .advance-search-form {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .form-group {
+    min-width: 100%;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group select {
+    font-size: 14px;
+    padding: 14px 14px 6px 14px;
+    min-height: 42px;
+  }
+  
+  .form-group::before {
+    font-size: 14px;
+    left: 14px;
+  }
+  
+  .form-group:focus-within::before,
+  .form-group[data-has-value="true"]::before {
+    font-size: 11px;
+    left: 10px;
+  }
+}
+
+/* Style for disabled state */
+.form-group select:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+
+#form-btn {
+  display: flex;
+  justify-content: flex-end; 
+  gap: 10px; 
+  width: 100%;
+  margin-top: 5px; 
+}
+
+#clear-btn{
+    color:rgb(20, 20, 123);
+    background-color:white ;
+}
+
+#search-btn{
+    color:grey;
+    background-color: rgb(20, 20, 123);
+    border:1px solid rgb(20, 20, 123) ;
+    border-radius: 15px;
+    margin:10px;
+    padding:4px 10px;
+}

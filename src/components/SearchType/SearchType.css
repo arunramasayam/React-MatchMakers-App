@@ -1,0 +1,25 @@
+.search-type {
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 3px;
+}
+
+.search-type-btn {
+  background: none;
+  border: none;
+  padding: 10px 20px 0 20px;
+  cursor: pointer;
+}
+
+.btn-label {
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.search-type-btn.active .btn-label {
+  border-bottom: 4px solid #154594;
+  border-radius: 3px;
+  color: #154594;
+
+}

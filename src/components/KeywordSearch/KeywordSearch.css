@@ -1,0 +1,185 @@
+
+.search-keyword{
+  font-family: Arial, Helvetica, sans-serif;
+  border:1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  height:60px;
+  margin-bottom:25px;
+  align-content: center;
+  justify-content: center;
+ 
+}
+
+.search-keyword-form label{
+  display:none;
+}
+
+#keyword-type{
+  border:none;
+  width:150px;
+  border-bottom:solid 1px black;
+  margin-left:10px;
+  /* margin-right: 5px;;
+  margin-bottom:10px; */
+}
+#search-box{
+  width:400px;
+ 
+}
+
+.search-keyword-form{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+#clear-btn{
+    color:rgb(20, 20, 123);
+    background-color:white ;
+    border:none;
+    margin-left:15px;
+}
+
+#search-btn{
+    color:grey;
+    background-color: rgb(20, 20, 123);
+    border:1px solid rgb(20, 20, 123) ;
+    border-radius: 15px;
+    margin-left:15px;
+    padding:4px 10px;
+}
+
+
+
+.form-group-keyword {
+  position: relative;
+  min-width: 200px;
+}
+
+.form-group-keyword select {
+  width: 225px;
+  padding: 16px 16px 8px 16px;
+  border: none;
+  font-size: 14px;
+  background-color: white;
+  transition: all 0.2s ease;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  color: #374151;
+  min-height:45px;
+  border-bottom: 1px solid black;
+}
+
+.form-group-keyword input {
+  width: 425px;
+  padding: 16px 16px 8px 16px;
+  border: none;
+  font-size: 14px;
+  background-color: #fff;
+  transition: all 0.2s ease;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  color: #374151;
+  min-height:20px;
+  border-bottom: 1px solid black;
+}
+
+/* Custom dropdown arrow */
+.form-group-keyword select{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23666' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.form-group-keyword select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+  border-bottom-color: #3b82f6;
+}
+
+.form-group-keyword select:hover {
+  border-color: #9ca3af;
+}
+
+/* Create floating label using pseudo-element */
+.form-group-keyword::before {
+  content: attr(data-label);
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  padding: 0;
+  color:black;
+  font-size: 12.5px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+/* When select is focused, move the label up */
+.form-group-keyword:focus-within::before {
+  top: 0px;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #3b82f6;
+  background-color: #f8f9fa;
+  padding: 0 4px;
+  font-weight: 500;
+}
+
+/* When select has a value (using data attribute), keep label up */
+.form-group-keyword[data-has-value="true"]::before {
+  top: 0px;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #3b82f6;
+  background-color: #f8f9fa;
+  padding: 0 4px;
+  font-weight: 500;
+}
+
+
+.form-group-keyword input:focus,
+.form-group-keyword[data-has-value="true"] input {
+  border-bottom-color: #3b82f6;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .search-keyword-form {
+    gap: 12px;
+  }
+  
+  .form-group-keyword {
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-keyword-form {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .form-group-keywrod {
+    min-width: 100%;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group-keyword select {
+    font-size: 14px;
+    padding: 14px 14px 6px 14px;
+    min-height: 42px;
+  }
+}
