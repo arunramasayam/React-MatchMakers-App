@@ -32,73 +32,76 @@ View the deployed project here: [Netlify Live Site](https://moonlit-chebakia-5c4
 These routes are handled using **React Router DOM** and pull their respective data from `db.json` located in the `public/` directory.
 
 ## Project Structure
+
+```  
 public/
 ├── index.html
 ├── manifest.json
 ├── robots.txt
 ├── _redirects
 └── data/
-└── db.json
+    └── db.json
 
 src/
 ├── index.js
 ├── styles/
-│ └── index.css
+│   └── index.css
 ├── hooks/
-│ └── useAxiosFetch.js
+│   └── useAxiosFetch.js
 ├── context/
-│ └── DataContext.js
+│   └── DataContext.js
 ├── utils/
-│ ├── ageCalculateUtils.js
-│ ├── HeightCalculateUtils.js
-│ └── options/
-│ ├── annualIncomeRangeOptions.js
-│ ├── casteSubcasteOptions.js
-│ ├── complexionOptions.js
-│ ├── dobRangeOptions.js
-│ ├── doshamOptions.js
-│ ├── eduationOptions.js
-│ ├── familyStatusOptions.js
-│ ├── familyValueOptions.js
-│ ├── fieldPathMap.js
-│ ├── heightRangeOptions.js
-│ ├── languageOptions.js
-│ ├── locationOptions.js
-│ ├── maritalStatusOptions.js
-│ ├── onBehalfOptions.js
-│ ├── professionOptions.js
-│ ├── rashiNakshatraPadasOptions.js
-│ └── residenceOptions.js
+│   ├── ageCalculateUtils.js
+│   ├── HeightCalculateUtils.js
+│   └── options/
+│       ├── annualIncomeRangeOptions.js
+│       ├── casteSubcasteOptions.js
+│       ├── complexionOptions.js
+│       ├── dobRangeOptions.js
+│       ├── doshamOptions.js
+│       ├── eduationOptions.js
+│       ├── familyStatusOptions.js
+│       ├── familyValueOptions.js
+│       ├── fieldPathMap.js
+│       ├── heightRangeOptions.js
+│       ├── languageOptions.js
+│       ├── locationOptions.js
+│       ├── maritalStatusOptions.js
+│       ├── onBehalfOptions.js
+│       ├── professionOptions.js
+│       ├── rashiNakshatraPadasOptions.js
+│       └── residenceOptions.js
 ├── components/
-│ ├── AdvanceSearch/
-│ │ ├── AdvanceSearch.css
-│ │ └── AdvanceSearch.js
-│ ├── App/
-│ │ ├── App.css
-│ │ └── App.js
-│ ├── CloudProfiles/
-│ │ ├── CloudProfiles.css
-│ │ └── CloudProfiles.js
-│ ├── Feed/
-│ │ ├── Feed.css
-│ │ └── Feed.js
-│ ├── KeywordSearch/
-│ │ ├── KeywordSearch.css
-│ │ └── KeywordSearch.js
-│ ├── MembershipLegends/
-│ │ ├── MembershipLegend.css
-│ │ └── MembershipLegend.js
-│ ├── Missing/
-│ │ └── Missing.js
-│ ├── Profile/
-│ │ ├── Profile.css
-│ │ └── Profile.js
-│ ├── Profiles/
-│ │ ├── Profiles.css
-│ │ └── Profiles.js
-│ ├── SearchType/
-│ │ ├── SearchType.css
-│ │ └── SearchType.js
-│ └── UserType/
-│ ├── UserType.css
-│ └── UserType.js
+│   ├── AdvanceSearch/
+│   │   ├── AdvanceSearch.css
+│   │   └── AdvanceSearch.js
+│   ├── App/
+│   │   ├── App.css
+│   │   └── App.js
+│   ├── CloudProfiles/
+│   │   ├── CloudProfiles.css
+│   │   └── CloudProfiles.js
+│   ├── Feed/
+│   │   ├── Feed.css
+│   │   └── Feed.js
+│   ├── KeywordSearch/
+│   │   ├── KeywordSearch.css
+│   │   └── KeywordSearch.js
+│   ├── MembershipLegends/
+│   │   ├── MembershipLegend.css
+│   │   └── MembershipLegend.js
+│   ├── Missing/
+│   │   └── Missing.js
+│   ├── Profile/
+│   │   ├── Profile.css
+│   │   └── Profile.js
+│   ├── Profiles/
+│   │   ├── Profiles.css
+│   │   └── Profiles.js
+│   ├── SearchType/
+│   │   ├── SearchType.css
+│   │   └── SearchType.js
+│   └── UserType/
+│       ├── UserType.css
+│       └── UserType.js
+```
