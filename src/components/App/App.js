@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
+        <Route path="/" element={<Navigate to="/profiles" />} />
         <Route path='/profiles' element={<Profiles
         />} />
         <Route path='/cloud-profiles' element={<CloudProfiles />} />
