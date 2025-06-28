@@ -1,5 +1,3 @@
-import { useContext } from "react";
-import { DataContext } from '../../context/DataContext';
 import UserType from '../UserType/UserType';
 import SearchType from "../SearchType/SearchType";
 import Feed from "../Feed/Feed";
@@ -7,8 +5,7 @@ import './CloudProfiles.css';
 import { useEffect, useState } from "react";
 import useAxiosFetch from "../../hooks/useAxiosFetch";
 
-const CloudProfiles = () => {
-    const { type = "cloudprofiles" } = useContext(DataContext);
+const CloudProfiles = ({ type = "cloudprofiles"}) => {
 
     const [cloudProfiles, setCloudProfiles] = useState([]);
     const [filteredCloudProfiles, setFilteredCloudProfiles] = useState([]);

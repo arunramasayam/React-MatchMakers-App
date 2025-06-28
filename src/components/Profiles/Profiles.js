@@ -3,13 +3,10 @@ import MembershipLegend from "../MembershipLegends/MembershipLegend";
 import UserType from "../UserType/UserType";
 import SearchType from "../SearchType/SearchType";
 import './Profiles.css';
-import { useContext } from "react";
-import { DataContext } from '../../context/DataContext';
 import { useEffect, useState } from "react";
 import useAxiosFetch from "../../hooks/useAxiosFetch";
 
-const Profiles = () => {
-    const { type = "profiles" } = useContext(DataContext);
+const Profiles = ({type="profiles"}) => {
 
     const [profiles, setProfiles] = useState([]);
     const [userCategory, setUserCategory] = useState('ALL');
