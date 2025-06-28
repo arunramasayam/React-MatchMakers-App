@@ -12,10 +12,11 @@ const CloudProfiles = ({ type = "cloudprofiles"}) => {
     const [userCategoryCloud, setUserCategoryCloud] = useState('ALL');
     const [profilesCategoryCloud, setProfilesCategoryCloud] = useState([]);
 
-    const { data, fetchError, isLoading } = useAxiosFetch("http://localhost:3500/cloud-profiles");
+    const { data, fetchError, isLoading } = useAxiosFetch("/data/db.json");
 
     useEffect(() => {
-        setCloudProfiles(data);
+        if(data && data.profiles)
+        setCloudProfiles(data.profiles);
     }, [data]);
 
 

@@ -6,18 +6,20 @@ import './Profiles.css';
 import { useEffect, useState } from "react";
 import useAxiosFetch from "../../hooks/useAxiosFetch";
 
-const Profiles = ({type="profiles"}) => {
+const Profiles = ({ type = "profiles" }) => {
 
     const [profiles, setProfiles] = useState([]);
     const [userCategory, setUserCategory] = useState('ALL');
     const [filteredProfiles, setFilteredProfiles] = useState([]);
     const [profilesCategory, setProfilesCategory] = useState([]);
 
-    const { data, fetchError, isLoading } = useAxiosFetch("http://localhost:3500/profiles");
+    const { data, fetchError, isLoading } = useAxiosFetch("/data/db.json");
 
     useEffect(() => {
-        setProfiles(data);
-    }, [data])
+        if (data && data.profiles) {
+            setProfiles(data.profiles);
+        }
+    }, [data]);
 
 
     useEffect(() => {
