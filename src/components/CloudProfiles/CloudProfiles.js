@@ -15,8 +15,8 @@ const CloudProfiles = ({ type = "cloudprofiles"}) => {
     const { data, fetchError, isLoading } = useAxiosFetch("/data/db.json");
 
     useEffect(() => {
-        if(data && data.profiles)
-        setCloudProfiles(data.profiles);
+        if(data && data["cloud-profiles"])
+        setCloudProfiles(data["cloud-profiles"]);
     }, [data]);
 
 
